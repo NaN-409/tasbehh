@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasbeh</title>
+    <style>
+      .tasbeh {
+        width: 168px;
+        height: 190px;
+        background-color: coral;
+        border-radius: 20%;
+        border: 3px solid chocolate;
+        position: absolute;
+        top: 20%;
+        left: 45%;
+      }
+      .ekran{
+        position: absolute;
+        top: 25px;
+        left: 16%;
+        width: 104px;
+        height: 35px;
+        border-radius: 20%;
+        caret-color: white;
+        outline: none;
+        font-size: 35px;
+        text-align: center;
+      }
+      .tugma {
+        position: absolute;
+        top: 45%;
+        left: 34%;
+        width: 55px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .nolga{
+        position: absolute;
+        top: 77%;
+        left: 41%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <div class="tasbeh">
+        <input type="text" value="0" name="" id="" class="ekran"/>
+        <button class="tugma"></button>
+        <button class="nolga"></button>
+      </div>
+      
+
+    <script>
+        document.querySelector('.tugma').addEventListener('click',function(){
+            var ekran = document.querySelector('.ekran');
+            console.log(typeof parseInt(ekran.value));
+            ekran.value= parseInt(ekran.value)+1
+        })
+        document.querySelector('.nolga').addEventListener('click',function(){
+            document.querySelector('.ekran').value=0
+        })
+    </script>
+  </body>
+</html>
